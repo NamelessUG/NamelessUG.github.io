@@ -20,23 +20,20 @@
     var CONFIG = {"hostname":"namelessug.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="时隔一年没碰博客突然发现我博客上传不了了??!出现了这样的报错 fatal: unable to access &#39;https:&#x2F;&#x2F;github.com&#x2F;*******************************.github.io.git&#x2F;&#39;: Failed to connect to github.com port 443: Timed out FATAL &amp;#123;">
+  <meta name="description" content="出了点意外其实已经搬迁到阿里云了,介于技术水平不足不能沿用Hexo,其实我觉得Hexo又方便又好看而且Markdown又方便写作.🙃🙃🙃So,我修好啦github链接失败的问题,最后发现还是DNS污染的问题,通过查资料,只要修改host文件就解决了.所以还是继续Hexo八.🐔附解决方案:如何加速国内Github访问">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于Error Spawn failed的问题">
-<meta property="og:url" content="https://namelessug.github.io/2021/03/19/%E5%85%B3%E4%BA%8EError%20Spawn%20failed%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="更新">
+<meta property="og:url" content="https://namelessug.github.io/2021/03/31/%E6%9B%B4%E6%96%B0/index.html">
 <meta property="og:site_name" content="“航”站楼">
-<meta property="og:description" content="时隔一年没碰博客突然发现我博客上传不了了??!出现了这样的报错 fatal: unable to access &#39;https:&#x2F;&#x2F;github.com&#x2F;*******************************.github.io.git&#x2F;&#39;: Failed to connect to github.com port 443: Timed out FATAL &amp;#123;">
+<meta property="og:description" content="出了点意外其实已经搬迁到阿里云了,介于技术水平不足不能沿用Hexo,其实我觉得Hexo又方便又好看而且Markdown又方便写作.🙃🙃🙃So,我修好啦github链接失败的问题,最后发现还是DNS污染的问题,通过查资料,只要修改host文件就解决了.所以还是继续Hexo八.🐔附解决方案:如何加速国内Github访问">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s3.ax1x.com/2021/03/18/6RKcTA.jpg">
-<meta property="og:image" content="https://s4.ax1x.com/2021/03/19/6fSy8A.jpg">
-<meta property="og:image" content="https://s4.ax1x.com/2021/03/19/6fSObT.jpg">
-<meta property="article:published_time" content="2021-03-19T10:28:46.000Z">
-<meta property="article:modified_time" content="2021-03-20T03:33:06.965Z">
+<meta property="article:published_time" content="2021-03-31T14:00:37.000Z">
+<meta property="article:modified_time" content="2021-03-31T14:16:30.474Z">
 <meta property="article:author" content="NamelessUG">
+<meta property="article:tag" content="建站">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s3.ax1x.com/2021/03/18/6RKcTA.jpg">
 
-<link rel="canonical" href="https://namelessug.github.io/2021/03/19/%E5%85%B3%E4%BA%8EError%20Spawn%20failed%E7%9A%84%E9%97%AE%E9%A2%98/">
+<link rel="canonical" href="https://namelessug.github.io/2021/03/31/%E6%9B%B4%E6%96%B0/">
 
 
 <script id="page-configurations">
@@ -49,7 +46,7 @@
   };
 </script>
 
-  <title>关于Error Spawn failed的问题 | “航”站楼</title>
+  <title>更新 | “航”站楼</title>
   
 
 
@@ -154,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2021/03/19/%E5%85%B3%E4%BA%8EError%20Spawn%20failed%E7%9A%84%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2021/03/31/%E6%9B%B4%E6%96%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -167,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          关于Error Spawn failed的问题
+          更新
         </h1>
 
         <div class="post-meta">
@@ -176,16 +173,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-03-19 18:28:46" itemprop="dateCreated datePublished" datetime="2021-03-19T18:28:46+08:00">2021-03-19</time>
+              <time title="Created: 2021-03-31 22:00:37 / Modified: 22:16:30" itemprop="dateCreated datePublished" datetime="2021-03-31T22:00:37+08:00">2021-03-31</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-20 11:33:06" itemprop="dateModified" datetime="2021-03-20T11:33:06+08:00">2021-03-20</time>
-              </span>
 
           
             <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -205,21 +196,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="时隔一年没碰博客突然发现我博客上传不了了"><a href="#时隔一年没碰博客突然发现我博客上传不了了" class="headerlink" title="时隔一年没碰博客突然发现我博客上传不了了??!"></a>时隔一年没碰博客突然发现我博客上传不了了??!</h2><p>出现了这样的报错</p>
-<pre><code>fatal: unable to access &#39;https://github.com/*******************************.github.io.git/&#39;: Failed to connect to github.com port 443: Timed out
-FATAL &#123;
-  err: Error: Spawn failed
-      at ChildProcess.&lt;anonymous&gt; (C:\Users\*******************************\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)
-      at ChildProcess.emit (events.js:315:20)
-      at ChildProcess.cp.emit (C:\Users\*******************************\node_modules\cross-spawn\lib\enoent.js:34:29)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12) &#123;
-    code: 128
-  &#125;
-&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</code></pre>
-<p><strong>啊这?</strong></p>
-<img src="https://s3.ax1x.com/2021/03/18/6RKcTA.jpg" width="50%" height="50%"  />
-
-<p>后来病急乱投医直接搜索<br><strong>err: Error: Spawn failed</strong><br>一看啊,各种操作都有,都试了后<br>全部木大<br>后来自己仔细一想<br>今年好像github上不去了<br><img src="https://s4.ax1x.com/2021/03/19/6fSy8A.jpg"><br>我直接代理<br>不出所料直接成功<br>后来发现<br><img src="https://s4.ax1x.com/2021/03/19/6fSObT.jpg" alt="见黄色标记"><br>原来真正的原因写得清清楚楚<br><em>fatal: unable to access github</em><br>这个故事告诉我们要学好英语</p>
+        <h2 id="出了点意外"><a href="#出了点意外" class="headerlink" title="出了点意外"></a>出了点意外</h2><p>其实已经搬迁到阿里云了,介于技术水平不足不能沿用Hexo,其实我觉得Hexo又方便又好看而且Markdown又方便写作.<br>🙃🙃🙃<br>So,我修好啦github链接失败的问题,最后发现还是DNS污染的问题,通过查资料,只要修改host文件就解决了.<br>所以还是继续Hexo八.🐔<br>附解决方案:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/66facbd8926a">如何加速国内Github访问</a></p>
 
     </div>
 
@@ -228,6 +205,9 @@ FATAL &#123;
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag"># 建站</a>
+          </div>
 
         
 
@@ -235,13 +215,10 @@ FATAL &#123;
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/18/%E4%BB%8E%E7%99%BD%E5%AB%96%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7%E7%9A%84%E6%82%B2%E4%BC%A4%E6%95%85%E4%BA%8B/" rel="prev" title="从白嫖开始说起的悲伤故事">
-      <i class="fa fa-chevron-left"></i> 从白嫖开始说起的悲伤故事
+    <a href="/2021/03/25/%E8%A6%81%E6%90%AC%E5%AE%B6%E4%BA%86/" rel="prev" title="要搬家了">
+      <i class="fa fa-chevron-left"></i> 要搬家了
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/20/%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" rel="next" title="一些小问题">
-      一些小问题 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -300,7 +277,7 @@ FATAL &#123;
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%9A%94%E4%B8%80%E5%B9%B4%E6%B2%A1%E7%A2%B0%E5%8D%9A%E5%AE%A2%E7%AA%81%E7%84%B6%E5%8F%91%E7%8E%B0%E6%88%91%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0%E4%B8%8D%E4%BA%86%E4%BA%86"><span class="nav-number">1.</span> <span class="nav-text">时隔一年没碰博客突然发现我博客上传不了了??!</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BA%E4%BA%86%E7%82%B9%E6%84%8F%E5%A4%96"><span class="nav-number">1.</span> <span class="nav-text">出了点意外</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
