@@ -18,7 +18,7 @@
   <meta name="author" content="NamelessUG">
   <meta name="keywords" content="">
   
-  <title>如何实现“半自动”写博客 - “航”站楼</title>
+  <title>hi - “航”站楼</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="如何实现“半自动”写博客">
+            <span class="h2" id="subtitle" title="hi">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-12-08 13:12" pubdate>
-        December 8, 2020 pm
+      <time datetime="2021-08-10 13:51" pubdate>
+        August 10, 2021 pm
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      680 字
+      1 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      1
        分钟
     </span>
   
@@ -225,98 +225,16 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">如何实现“半自动”写博客</h1>
+            <h1 style="display: none">hi</h1>
             
             <div class="markdown-body">
-              <p>像某些懒人，就是懒得打那几行代码（比如我）<br>所以花了亿点点时间，浅浅学习了一下.bat来完成这个过程</p>
-<h2 id="Create-bat"><a href="#Create-bat" class="headerlink" title="Create.bat"></a><span id="Create.bat">Create.bat</span></h2><pre><code>@echo off
-set /p name=input name:
-echo name:%name%
-echo please wait
-hexo new post %name% &amp;&amp; call openIDE.bat %name%
-pause</code></pre>
-<p><img src="https://s3.ax1x.com/2020/12/08/rperpF.png" srcset="/img/loading.gif" lazyload alt="Create.bat"></p>
-<p>分析：</p>
-<ol>
-<li>@echo off执行以后，后面所有的命令均不显示，<br>包括本条命令。（echo 表示显示此命令后的字符）</li>
-<li>输入文档名</li>
-<li>显示自己的文件名</li>
-<li>显示“please wait”</li>
-<li>使用Hexo指令创建新文档并唤起<a href="#openIDE.bat">openIDE.bat</a>（期间传递了变量%name%）</li>
-<li>按任意键继续…</li>
-</ol>
-<h2 id="openIDE-bat"><a href="#openIDE-bat" class="headerlink" title="openIDE.bat"></a><span id="openIDE.bat">openIDE.bat</span></h2><pre><code>start /min /w mshta vbscript:setTimeout(&quot;window.close()&quot;,1000)
-echo the input is %1
-set name=%1
-echo %name%
-start /d &quot;C:\Users\Nameless\NamelessUGhome\NamelessUG\source\_posts&quot;    %name%.md
-pause</code></pre>
-<p>   <img src="https://s3.ax1x.com/2020/12/08/rperpF.png" srcset="/img/loading.gif" lazyload alt="Create.bat"></p>
-<p>分析：</p>
-<ol>
-<li>等待1秒</li>
-<li>这一行是完成完成变量传递可以用下图理解<blockquote>
-<p><img src="https://s3.ax1x.com/2020/12/08/rpl9jU.png" srcset="/img/loading.gif" lazyload alt="图片来自http://www.dzwebs.net/2942.html"></p>
-</blockquote>
-</li>
-</ol>
-<ol start="3">
-<li>输出名字（个人觉得没有用这一行回头试试删除）</li>
-<li>打开对应文件</li>
-<li>按任意键继续…</li>
-</ol>
-<h2 id="Hexo-s-g-bat"><a href="#Hexo-s-g-bat" class="headerlink" title="Hexo  s -g.bat"></a><span id="Hexo  s -g.bat">Hexo  s -g.bat</span></h2><pre><code>hexo s -d</code></pre>
-<p>   这条代码就是生成并启动本地服务，进行文章预览调试</p>
-<h2 id="Deploy-bat"><a href="#Deploy-bat" class="headerlink" title="Deploy.bat"></a><span id="Deploy.bat">Deploy.bat</span></h2><pre><code>start clean.bat
-start /min /w mshta vbscript:setTimeout(&quot;window.close()&quot;,2000)
-start gd.bat
-exit</code></pre>
-<ol>
-<li>唤起<a href="#clean.bat">clean.bat</a></li>
-<li>等待2秒</li>
-<li>唤起<a href="#gd.bat">gd.bat</a></li>
-<li>退出程序</li>
-</ol>
-<h2 id="Clean-bat"><a href="#Clean-bat" class="headerlink" title="Clean.bat"></a><span id="Clean.bat">Clean.bat</span></h2><pre><code>@echo off
-echo clean
-echo please wait
-hexo clean
-exit</code></pre>
-<ol>
-<li>@echo off执行以后，后面所有的命令均不显示，<br>包括本条命令。（echo 表示显示此命令后的字符）</li>
-<li>显示clean</li>
-<li>显示please wait</li>
-<li>执行hexo clean</li>
-</ol>
-<blockquote>
-<p>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-</blockquote>
-<ol start="5">
-<li>退出程序</li>
-</ol>
-<h2 id="gb-bat"><a href="#gb-bat" class="headerlink" title="gb.bat"></a><span id="gb.bat">gb.bat</span></h2><pre><code>start /min /w mshta vbscript:setTimeout(&quot;window.close()&quot;,2000)
-hexo g -d
-exit</code></pre>
-<ol>
-<li>等待2秒</li>
-<li>文件生成后立即部署网站</li>
-<li>退出程序</li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实实现这个小小功能还是蛮简单（指借用别人代码），重点还是在理解每一行代码的作用（像我这样的渣渣）。<br>顺便安利一下坚果云的Markdown真不错很爽（对于新手）本来原文（指抄袭对象）是使用Sublime Text 3，然而小白可以偷懒何乐不为捏😀。<br>ps：我写文章主要靠参考</p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xyz1584172808/article/details/105468939?utm_source=app">(CSDN)利用bat批处理命令实现Hexo文章的自动创建和部署</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/fly_as_tadpole/article/details/85177379">(CSDN)Windows下的bat文件的@echo off 作用？</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u010319687/article/details/17416259">(CSDN)BAT（批处理）文件编写详细手册</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/fygkchina/article/details/12790697">(CSDN)bat的使用</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tocy/p/markdown-link-inner-page.html">(博客园)Markdown页内跳转实现方法</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/aile770339804/article/details/19912897">(CSDN）bat脚本启动、关闭程序、等待时间</a><br><a target="_blank" rel="noopener" href="http://www.dzwebs.net/2942.html">(大众计算机学习网)两个批处理文件中如何传递参数</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/siucaan/p/9623129.html">(cnblogs)hexo部署步骤</a><br><a target="_blank" rel="noopener" href="https://hexo.bootcss.com/">Hexo 中文文档</a></p>
+              <p>test</p>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/%E5%BB%BA%E7%AB%99/">建站</a>
-                    
-                  </div>
                 
               </div>
               
@@ -331,18 +249,12 @@ exit</code></pre>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/12/09/%E4%BB%8A%E5%A4%A9%E5%8F%88%E6%98%AF%E6%B0%B4%E4%B8%80%E5%A4%A9/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">今天又是水水的一天</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/12/07/%E5%92%95%E5%92%95%E5%92%95/">
-                        <span class="hidden-mobile">咕咕咕</span>
+                      <a href="/2021/04/02/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A1%E5%88%92/">
+                        <span class="hidden-mobile">最近的一些计划</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

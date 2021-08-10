@@ -1,1042 +1,730 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"namelessug.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="“航”站楼">
-<meta property="og:url" content="https://namelessug.github.io/index.html">
-<meta property="og:site_name" content="“航”站楼">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="NamelessUG">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://namelessug.github.io/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>“航”站楼</title>
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="NamelessUG">
+  <meta name="keywords" content="">
+  
+  <title>“航”站楼</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<link  rel="stylesheet" href="/css/main.css" />
 
-</head>
+<!-- 自定义样式保持在最底部 -->
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"namelessug.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">“航”站楼</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="An elegant Material-Design theme for Hexo">
+              
+            </span>
 
+            
+          </div>
 
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
 
-</div>
-    </header>
-
+  <main>
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/10/hi/" target="_self">
+          hi
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/10/hi/" target="_self">
+          
+          
+            
+          
+          test
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-10 13:51" pubdate>
+              2021-08-10
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
   </div>
 
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/02/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A1%E5%88%92/" target="_self">
+          最近的一些计划
+        </a>
+      </h1>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
+      <p class="index-excerpt">
+        <a href="/2021/04/02/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A1%E5%88%92/" target="_self">
           
-
-          <div class="content index posts-expand">
+          
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2021/04/02/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A1%E5%88%92/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/04/02/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A1%E5%88%92/" class="post-title-link" itemprop="url">最近的一些计划</a>
-        </h2>
+          其实最近还是干了不少事情，虽然都是一些上手很简单的小项目，但是都很有趣。清明期间会一一道来的。
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
+        </a>
+      </p>
 
-              <time title="Created: 2021-04-02 12:02:55 / Modified: 12:10:56" itemprop="dateCreated datePublished" datetime="2021-04-02T12:02:55+08:00">2021-04-02</time>
-            </span>
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-02 12:02" pubdate>
+              2021-04-02
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
 
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/31/%E6%9B%B4%E6%96%B0/" target="_self">
+          更新
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/31/%E6%9B%B4%E6%96%B0/" target="_self">
           
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>其实最近还是干了不少事情，虽然都是一些上手很简单的小项目，但是都很有趣。清明期间会一一道来的。</strong></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2021/03/31/%E6%9B%B4%E6%96%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/03/31/%E6%9B%B4%E6%96%B0/" class="post-title-link" itemprop="url">更新</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-31 22:00:37 / Modified: 22:16:30" itemprop="dateCreated datePublished" datetime="2021-03-31T22:00:37+08:00">2021-03-31</time>
-            </span>
-
+            
           
+          出了点意外其实已经搬迁到阿里云了,介于技术水平不足不能沿用Hexo,其实我觉得Hexo又方便又好看而且Markdown又方便写作.🙃🙃🙃So,我修好啦github链接失败的问题,最后发现还是DNS污染的问题,通过查资料,只要修改host文件就解决了.所以还是继续Hexo八.🐔附解决方案:如何加速国内Github访问
 
-        </div>
-      </header>
+        </a>
+      </p>
 
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-31 22:00" pubdate>
+              2021-03-31
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BB%BA%E7%AB%99/">建站</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
     
     
-    
-    <div class="post-body" itemprop="articleBody">
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/25/%E8%A6%81%E6%90%AC%E5%AE%B6%E4%BA%86/" target="_self">
+          要搬家了
+        </a>
+      </h1>
 
-      
-          <h2 id="出了点意外"><a href="#出了点意外" class="headerlink" title="出了点意外"></a>出了点意外</h2><p>其实已经搬迁到阿里云了,介于技术水平不足不能沿用Hexo,其实我觉得Hexo又方便又好看而且Markdown又方便写作.<br>🙃🙃🙃<br>So,我修好啦github链接失败的问题,最后发现还是DNS污染的问题,通过查资料,只要修改host文件就解决了.<br>所以还是继续Hexo八.🐔<br>附解决方案:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/66facbd8926a">如何加速国内Github访问</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2021/03/25/%E8%A6%81%E6%90%AC%E5%AE%B6%E4%BA%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+      <p class="index-excerpt">
+        <a href="/2021/03/25/%E8%A6%81%E6%90%AC%E5%AE%B6%E4%BA%86/" target="_self">
           
-            <a href="/2021/03/25/%E8%A6%81%E6%90%AC%E5%AE%B6%E4%BA%86/" class="post-title-link" itemprop="url">要搬家了</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-25 23:46:34 / Modified: 23:55:45" itemprop="dateCreated datePublished" datetime="2021-03-25T23:46:34+08:00">2021-03-25</time>
-            </span>
-
           
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>最近技术上有大突破<br>(虽然和github被墙也有一定原因)<br>总之这个月内就会搬去阿里云了<br> \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\</p>
-<p>顺便试试我在阿里云建的云盘外链<br><img src="https://nameless25.oss-cn-guangzhou.aliyuncs.com/uploads/2021/03/25/iUNwWFeX_bba190db86f53a9ad64c1b0462313855.jpeg?Expires=1616687686" alt="输入图片描述"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2021/03/20/vposy-%E5%A4%A7%E5%B8%88/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+            
           
-            <a href="/2021/03/20/vposy-%E5%A4%A7%E5%B8%88/" class="post-title-link" itemprop="url">vposy(大师)</a>
-        </h2>
+          最近技术上有大突破(虽然和github被墙也有一定原因)总之这个月内就会搬去阿里云了 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+顺便试试我在阿里云建的云盘外链
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
+        </a>
+      </p>
 
-              <time title="Created: 2021-03-20 12:21:29 / Modified: 12:23:24" itemprop="dateCreated datePublished" datetime="2021-03-20T12:21:29+08:00">2021-03-20</time>
-            </span>
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-25 23:46" pubdate>
+              2021-03-25
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
 
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/20/vposy-%E5%A4%A7%E5%B8%88/" target="_self">
+          vposy(大师)
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/20/vposy-%E5%A4%A7%E5%B8%88/" target="_self">
           
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>我Adobe全家桶全靠大师了</p>
-<p><a target="_blank" rel="noopener" href="https://weibo.com/p/1005051112829033/home?profile_ftype=1&is_all=1#_0%E5%BE%AE%E5%8D%9A%E9%A6%96%E9%A1%B5">vposy微博首页</a></p>
-<p>我愿称之为绝活</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2021/03/20/%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/03/20/%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">一些小问题</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-20 11:33:23 / Modified: 11:45:57" itemprop="dateCreated datePublished" datetime="2021-03-20T11:33:23+08:00">2021-03-20</time>
-            </span>
-
+            
           
+          我Adobe全家桶全靠大师了
+vposy微博首页
+我愿称之为绝活
 
-        </div>
-      </header>
+        </a>
+      </p>
 
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-20 12:21" pubdate>
+              2021-03-20
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
     
     
-    
-    <div class="post-body" itemprop="articleBody">
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/20/%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" target="_self">
+          一些小问题
+        </a>
+      </h1>
 
-      
-          <p>其实在做这个博客的时候就已经感受到找bug的痛苦了<br>今天发现了一个小问题<br>就是关于图片缩放的问题哈<br>such as<br>原图<img src="https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg" alt="6RjtbQ.jpg"></p>
-<pre><code>![6RjtbQ.jpg](https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg)</code></pre>
-<p>修改大小后(1)![6RjtbQ.jpg](<a target="_blank" rel="noopener" href="https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg">https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg</a> =300x300)</p>
-<pre><code>![6RjtbQ.jpg](https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg =300x300)</code></pre>
-<p>修改后(2)<br><img src="https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg" width="40%" height="40%"  /></p>
-<pre><code>&lt;img src=&quot;https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg&quot; width=&quot;40%&quot; height=&quot;40%&quot;  /&gt;</code></pre>
-<p>相信一定很容易看出区别</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2021/03/19/%E5%85%B3%E4%BA%8EError%20Spawn%20failed%E7%9A%84%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+      <p class="index-excerpt">
+        <a href="/2021/03/20/%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" target="_self">
           
-            <a href="/2021/03/19/%E5%85%B3%E4%BA%8EError%20Spawn%20failed%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">关于Error Spawn failed的问题</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-03-19 18:28:46" itemprop="dateCreated datePublished" datetime="2021-03-19T18:28:46+08:00">2021-03-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-20 11:33:06" itemprop="dateModified" datetime="2021-03-20T11:33:06+08:00">2021-03-20</time>
-              </span>
-
           
+            
+          
+          其实在做这个博客的时候就已经感受到找bug的痛苦了今天发现了一个小问题就是关于图片缩放的问题哈such as原图
+![6RjtbQ.jpg](https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg)
+修改大小后(1)![6RjtbQ.jpg](https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg =300x300)
+![6RjtbQ.jpg
+        </a>
+      </p>
 
-        </div>
-      </header>
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-20 11:33" pubdate>
+              2021-03-20
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
 
+  <div class="row mx-auto index-card">
     
     
-    
-    <div class="post-body" itemprop="articleBody">
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/19/%E5%85%B3%E4%BA%8EError%20Spawn%20failed%E7%9A%84%E9%97%AE%E9%A2%98/" target="_self">
+          关于Error Spawn failed的问题
+        </a>
+      </h1>
 
-      
-          <h2 id="时隔一年没碰博客突然发现我博客上传不了了"><a href="#时隔一年没碰博客突然发现我博客上传不了了" class="headerlink" title="时隔一年没碰博客突然发现我博客上传不了了??!"></a>时隔一年没碰博客突然发现我博客上传不了了??!</h2><p>出现了这样的报错</p>
-<pre><code>fatal: unable to access &#39;https://github.com/*******************************.github.io.git/&#39;: Failed to connect to github.com port 443: Timed out
+      <p class="index-excerpt">
+        <a href="/2021/03/19/%E5%85%B3%E4%BA%8EError%20Spawn%20failed%E7%9A%84%E9%97%AE%E9%A2%98/" target="_self">
+          
+          
+            
+          
+          时隔一年没碰博客突然发现我博客上传不了了??!出现了这样的报错
+fatal: unable to access &#39;https://github.com/*******************************.github.io.git/&#39;: Failed to connect to github.com port 443: Timed out
 FATAL &#123;
-  err: Error: Spawn failed
-      at ChildProcess.&lt;anonymous&gt; (C:\Users\*******************************\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)
-      at ChildProcess.emit (events.js:315:20)
-      at ChildProcess.cp.emit (C:\Users\*******************************\node_modules\cross-spawn\lib\enoent.js:34:29)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12) &#123;
-    code: 128
-  &#125;
-&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</code></pre>
-<p><strong>啊这?</strong></p>
-<img src="https://s3.ax1x.com/2021/03/18/6RKcTA.jpg" width="50%" height="50%"  />
+  
+        </a>
+      </p>
 
-<p>后来病急乱投医直接搜索<br><strong>err: Error: Spawn failed</strong><br>一看啊,各种操作都有,都试了后<br>全部木大<br>后来自己仔细一想<br>今年好像github上不去了<br><img src="https://s4.ax1x.com/2021/03/19/6fSy8A.jpg"><br>我直接代理<br>不出所料直接成功<br>后来发现<br><img src="https://s4.ax1x.com/2021/03/19/6fSObT.jpg" alt="见黄色标记"><br>原来真正的原因写得清清楚楚<br><em>fatal: unable to access github</em><br>这个故事告诉我们要学好英语</p>
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-19 18:28" pubdate>
+              2021-03-19
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
 
-      
-    </div>
-
+  <div class="row mx-auto index-card">
     
     
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/18/%E4%BB%8E%E7%99%BD%E5%AB%96%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7%E7%9A%84%E6%82%B2%E4%BC%A4%E6%95%85%E4%BA%8B/" target="_self">
+          从白嫖开始说起的悲伤故事
+        </a>
+      </h1>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2021/03/18/%E4%BB%8E%E7%99%BD%E5%AB%96%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7%E7%9A%84%E6%82%B2%E4%BC%A4%E6%95%85%E4%BA%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+      <p class="index-excerpt">
+        <a href="/2021/03/18/%E4%BB%8E%E7%99%BD%E5%AB%96%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7%E7%9A%84%E6%82%B2%E4%BC%A4%E6%95%85%E4%BA%8B/" target="_self">
           
-            <a href="/2021/03/18/%E4%BB%8E%E7%99%BD%E5%AB%96%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7%E7%9A%84%E6%82%B2%E4%BC%A4%E6%95%85%E4%BA%8B/" class="post-title-link" itemprop="url">从白嫖开始说起的悲伤故事</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-03-18 22:23:42" itemprop="dateCreated datePublished" datetime="2021-03-18T22:23:42+08:00">2021-03-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-20 11:32:18" itemprop="dateModified" datetime="2021-03-20T11:32:18+08:00">2021-03-20</time>
-              </span>
-
           
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>故事还要从白嫖说起</strong><br>某天中午突发奇想我能不能白嫖会员,于是我马上打开度娘搜索白嫖.<br>于是乎我马上得到了一个”看似”简单可行的方法 ===&gt;详情见<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV16z4y1f7oE?t=66">哔哩哔哩-MT管理器</a></p>
-<p>于是乎啪一下子很快啊<br>我上来就是一个MT<br>再来就是一个举一反三<br>打开我ourplay就是解包啊<br>直接打开.dex<br><img src="https://s3.ax1x.com/2021/03/18/6RKPRf.jpg" alt="dex文件"><br><strong>啊?这啥这能吃?我是谁我在哪?我来这里干什么?直接火化了.</strong></p>
-<p><img src="https://s3.ax1x.com/2021/03/18/6RK6wd.gif"><br><strong>这触及了我的知识盲区</strong><br><img src="https://s3.ax1x.com/2021/03/19/6RjYDg.png" width="70%" height="70%"  /></p>
-<p>于是乎我直接抬走下一个<br>我当场在下方推荐捕捉到另外一个可行方案<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15V411Z7mh?t=119">哔哩哔哩手机抓包教程</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ug4y1q7HL?t=272">哔哩哔哩手机抓包教程</a><br>我直接下载<br>打开<br>抓包<br>查看响应</p>
-<h2 id="我直接心肺停止"><a href="#我直接心肺停止" class="headerlink" title="我直接心肺停止"></a>我直接心肺停止</h2><p><img src="https://s3.ax1x.com/2021/03/19/6RjtbQ.jpg" width="50%" height="50%"  /><img src="https://s3.ax1x.com/2021/03/18/6R1jUJ.jpg" width="50%" height="50%"  /></p>
-<p>这是别人的抓包内容</p>
-<img src="https://s3.ax1x.com/2021/03/19/6RjJKS.jpg" width="50%" height="50%"  />
-
-<h2 id="WTF"><a href="#WTF" class="headerlink" title="WTF"></a>WTF</h2><p>是我哪里错啦???<br>我马上多方查证直接把问题指向了加密问题<br>其中较为有代表性的</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42277380/article/details/97146910">一例APK脱壳反编译寻找AES密钥过程记录</a></p>
-</blockquote>
-<p>啪一下子啊很快啊<br>我马上开始寻找密钥<br>很快锁定了关键字”AES”<br>然鹅<br><img src="https://s3.ax1x.com/2021/03/19/6RztbD.jpg" alt=" "><br>显然这一大串代码我是看不懂的<br>但是照葫芦画瓢也得试试吧<br>于是乎我合理猜测密钥就是<br>SecretKeySpec后方代码<br>难道蓝色字段不显眼吗?<br>我直接复制<br>上网AES解密<br>然鹅<br>解密结果不尽人意<br>全是乱码QAQ<br>不过这在情理之中,应为如这长长的代码所示肯定是对密钥进行了处理<br>我下一部的解决方案是想跑一跑这代码不就知道了嘻嘻<br>然鹅我是小白啊QAQ<br>这显然需要java的知识<br>看来学无止境啊<br>于是乎就白给了一天</p>
-<p>PS:其实还是有想法的,根据<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903828865679373">(掘金)apk破解</a>的思路我还可以通过更改apk的规则来实现白嫖,例如修改判断原则来骗过系统识别vip什么的,也是不错的想法,有时间会试试的,然而这也是要学java和那个smali文件的东东(哭)</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2020/12/09/%E4%BB%8A%E5%A4%A9%E5%8F%88%E6%98%AF%E6%B0%B4%E4%B8%80%E5%A4%A9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+            
           
-            <a href="/2020/12/09/%E4%BB%8A%E5%A4%A9%E5%8F%88%E6%98%AF%E6%B0%B4%E4%B8%80%E5%A4%A9/" class="post-title-link" itemprop="url">今天又是水水的一天</a>
-        </h2>
+          故事还要从白嫖说起某天中午突发奇想我能不能白嫖会员,于是我马上打开度娘搜索白嫖.于是乎我马上得到了一个”看似”简单可行的方法 ===&gt;详情见哔哩哔哩-MT管理器
+于是乎啪一下子很快啊我上来就是一个MT再来就是一个举一反三打开我ourplay就是解包啊直接打开.dex啊?这啥这能吃?我是谁我在哪?我来这里干什么?直接火化了.
+这触及了我的知识盲区
+于是乎我直接抬走下一个我当场在下方推荐捕捉到另
+        </a>
+      </p>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-18 22:23" pubdate>
+              2021-03-18
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
 
-              <time title="Created: 2020-12-09 23:51:06 / Modified: 23:52:03" itemprop="dateCreated datePublished" datetime="2020-12-09T23:51:06+08:00">2020-12-09</time>
-            </span>
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/09/%E4%BB%8A%E5%A4%A9%E5%8F%88%E6%98%AF%E6%B0%B4%E4%B8%80%E5%A4%A9/" target="_self">
+          今天又是水水的一天
+        </a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/12/09/%E4%BB%8A%E5%A4%A9%E5%8F%88%E6%98%AF%E6%B0%B4%E4%B8%80%E5%A4%A9/" target="_self">
           
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今天什么都没干<br>推荐一首歌水一下</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=811995&auto=0&height=66"></iframe>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2020/12/08/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E2%80%9C%E5%8D%8A%E8%87%AA%E5%8A%A8%E2%80%9D%E5%86%99%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/12/08/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E2%80%9C%E5%8D%8A%E8%87%AA%E5%8A%A8%E2%80%9D%E5%86%99%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">如何实现“半自动”写博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-12-08 13:12:16 / Modified: 19:01:07" itemprop="dateCreated datePublished" datetime="2020-12-08T13:12:16+08:00">2020-12-08</time>
-            </span>
-
+            
           
+          今天什么都没干推荐一首歌水一下
 
-        </div>
-      </header>
 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-09 23:51" pubdate>
+              2020-12-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
     
     
-    
-    <div class="post-body" itemprop="articleBody">
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/08/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E2%80%9C%E5%8D%8A%E8%87%AA%E5%8A%A8%E2%80%9D%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_self">
+          如何实现“半自动”写博客
+        </a>
+      </h1>
 
-      
-          <p>像某些懒人，就是懒得打那几行代码（比如我）<br>所以花了亿点点时间，浅浅学习了一下.bat来完成这个过程</p>
-<h2 id="Create-bat"><a href="#Create-bat" class="headerlink" title="Create.bat"></a><span id="Create.bat">Create.bat</span></h2><pre><code>@echo off
+      <p class="index-excerpt">
+        <a href="/2020/12/08/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E2%80%9C%E5%8D%8A%E8%87%AA%E5%8A%A8%E2%80%9D%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_self">
+          
+          
+            
+          
+          像某些懒人，就是懒得打那几行代码（比如我）所以花了亿点点时间，浅浅学习了一下.bat来完成这个过程
+Create.bat@echo off
 set /p name=input name:
 echo name:%name%
 echo please wait
 hexo new post %name% &amp;&amp; call openIDE.bat %name%
-pause</code></pre>
-<p><img src="https://s3.ax1x.com/2020/12/08/rperpF.png" alt="Create.bat"></p>
-<p>分析：</p>
-<ol>
-<li>@echo off执行以后，后面所有的命令均不显示，<br>包括本条命令。（echo 表示显示此命令后的字符）</li>
-<li>输入文档名</li>
-<li>显示自己的文件名</li>
-<li>显示“please wait”</li>
-<li>使用Hexo指令创建新文档并唤起<a href="#openIDE.bat">openIDE.bat</a>（期间传递了变量%name%）</li>
-<li>按任意键继续…</li>
-</ol>
-<h2 id="openIDE-bat"><a href="#openIDE-bat" class="headerlink" title="openIDE.bat"></a><span id="openIDE.bat">openIDE.bat</span></h2><pre><code>start /min /w mshta vbscript:setTimeout(&quot;window.close()&quot;,1000)
-echo the input is %1
-set name=%1
-echo %name%
-start /d &quot;C:\Users\Nameless\NamelessUGhome\NamelessUG\source\_posts&quot;    %name%.md
-pause</code></pre>
-<p>   <img src="https://s3.ax1x.com/2020/12/08/rperpF.png" alt="Create.bat"></p>
-<p>分析：</p>
-<ol>
-<li>等待1秒</li>
-<li>这一行是完成完成变量传递可以用下图理解<blockquote>
-<p><img src="https://s3.ax1x.com/2020/12/08/rpl9jU.png" alt="图片来自http://www.dzwebs.net/2942.html"></p>
-</blockquote>
-</li>
-</ol>
-<ol start="3">
-<li>输出名字（个人觉得没有用这一行回头试试删除）</li>
-<li>打开对应文件</li>
-<li>按任意键继续…</li>
-</ol>
-<h2 id="Hexo-s-g-bat"><a href="#Hexo-s-g-bat" class="headerlink" title="Hexo  s -g.bat"></a><span id="Hexo  s -g.bat">Hexo  s -g.bat</span></h2><pre><code>hexo s -d</code></pre>
-<p>   这条代码就是生成并启动本地服务，进行文章预览调试</p>
-<h2 id="Deploy-bat"><a href="#Deploy-bat" class="headerlink" title="Deploy.bat"></a><span id="Deploy.bat">Deploy.bat</span></h2><pre><code>start clean.bat
-start /min /w mshta vbscript:setTimeout(&quot;window.close()&quot;,2000)
-start gd.bat
-exit</code></pre>
-<ol>
-<li>唤起<a href="#clean.bat">clean.bat</a></li>
-<li>等待2秒</li>
-<li>唤起<a href="#gd.bat">gd.bat</a></li>
-<li>退出程序</li>
-</ol>
-<h2 id="Clean-bat"><a href="#Clean-bat" class="headerlink" title="Clean.bat"></a><span id="Clean.bat">Clean.bat</span></h2><pre><code>@echo off
-echo clean
-echo please wait
-hexo clean
-exit</code></pre>
-<ol>
-<li>@echo off执行以后，后面所有的命令均不显示，<br>包括本条命令。（echo 表示显示此命令后的字符）</li>
-<li>显示clean</li>
-<li>显示please wait</li>
-<li>执行hexo clean</li>
-</ol>
-<blockquote>
-<p>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-</blockquote>
-<ol start="5">
-<li>退出程序</li>
-</ol>
-<h2 id="gb-bat"><a href="#gb-bat" class="headerlink" title="gb.bat"></a><span id="gb.bat">gb.bat</span></h2><pre><code>start /min /w mshta vbscript:setTimeout(&quot;window.close()&quot;,2000)
-hexo g -d
-exit</code></pre>
-<ol>
-<li>等待2秒</li>
-<li>文件生成后立即部署网站</li>
-<li>退出程序</li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实实现这个小小功能还是蛮简单（指借用别人代码），重点还是在理解每一行代码的作用（像我这样的渣渣）。<br>顺便安利一下坚果云的Markdown真不错很爽（对于新手）本来原文（指抄袭对象）是使用Sublime Text 3，然而小白可以偷懒何乐不为捏😀。<br>ps：我写文章主要靠参考</p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xyz1584172808/article/details/105468939?utm_source=app">(CSDN)利用bat批处理命令实现Hexo文章的自动创建和部署</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/fly_as_tadpole/article/details/85177379">(CSDN)Windows下的bat文件的@echo off 作用？</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u010319687/article/details/17416259">(CSDN)BAT（批处理）文件编写详细手册</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/fygkchina/article/details/12790697">(CSDN)bat的使用</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tocy/p/markdown-link-inner-page.html">(博客园)Markdown页内跳转实现方法</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/aile770339804/article/details/19912897">(CSDN）bat脚本启动、关闭程序、等待时间</a><br><a target="_blank" rel="noopener" href="http://www.dzwebs.net/2942.html">(大众计算机学习网)两个批处理文件中如何传递参数</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/siucaan/p/9623129.html">(cnblogs)hexo部署步骤</a><br><a target="_blank" rel="noopener" href="https://hexo.bootcss.com/">Hexo 中文文档</a></p>
+pause
 
-      
-    </div>
+分析：
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://namelessug.github.io/2020/12/07/%E5%92%95%E5%92%95%E5%92%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NamelessUG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="“航”站楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/07/%E5%92%95%E5%92%95%E5%92%95/" class="post-title-link" itemprop="url">咕咕咕</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-12-07 23:21:40 / Modified: 23:27:19" itemprop="dateCreated datePublished" datetime="2020-12-07T23:21:40+08:00">2020-12-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今天又是咸鱼的一天。<br>介于事情太多（<em>明明是starboard上头</em>）<br>各种PPT，论文，查表。。。导致建站一咕再咕。</p>
-<p><strong>下次一定</strong></p>
-<p><img src="https://pic3.zhimg.com/80/v2-b6026bbad2ee11bbb4f761f4359fb500_720w.jpg?source=1940ef5c" alt="输入图片描述"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">NamelessUG</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">13</span>
-          <span class="site-state-item-name">posts</span>
+@ech
         </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-08 13:12" pubdate>
+              2020-12-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BB%BA%E7%AB%99/">建站</a>
+            
+          </div>
+        
       </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
   </nav>
-</div>
 
 
 
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    
 
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">NamelessUG</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
   </div>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="Total Visitors">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="Total Views">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
 </div>
+    
 
+    
+  </main>
 
-
-
-
-
-
-
-      </div>
-    </footer>
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
   </div>
-
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 
   
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
 
 </body>
 </html>
