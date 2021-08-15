@@ -52,7 +52,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>(=ﾟωﾟ)ﾉ</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -142,7 +142,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/default.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -175,6 +175,59 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/08/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E2%80%9C%E5%8D%8A%E8%87%AA%E5%8A%A8%E2%80%9D%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_self">
+          如何实现“半自动”写博客
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/12/08/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E2%80%9C%E5%8D%8A%E8%87%AA%E5%8A%A8%E2%80%9D%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_self">
+          
+          
+            
+          
+          像某些懒人，就是懒得打那几行代码（比如我）所以花了亿点点时间，浅浅学习了一下.bat来完成这个过程
+Create.bat@echo off
+set /p name=input name:
+echo name:%name%
+echo please wait
+hexo new post %name% &amp;&amp; call openIDE.bat %name%
+pause
+
+分析：
+
+@ech
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-08 13:12" pubdate>
+              2020-12-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BB%BA%E7%AB%99/">建站</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -413,6 +466,30 @@ wow，就这样诞生了
      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
   </div>
   
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
 
   
 
@@ -465,6 +542,8 @@ wow，就这样诞生了
   <script  src="/js/local-search.js" ></script>
 
 
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

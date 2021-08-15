@@ -18,7 +18,7 @@
   <meta name="author" content="NamelessUG">
   <meta name="keywords" content="">
   
-  <title>关于Error Spawn failed的问题 - “航”站楼</title>
+  <title>关于 - “航”站楼</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -34,8 +34,6 @@
     
   
 
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
 
@@ -64,7 +62,7 @@
 
 
 <body>
-  <header style="height: 70vh;">
+  <header style="height: 60vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -158,51 +156,14 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/st.jpg') no-repeat center center;
+         style="background: url('/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="关于Error Spawn failed的问题">
+            <span class="h2" id="subtitle" title="关于">
               
             </span>
-
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-19 18:28" pubdate>
-        2021年3月19日 晚上
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      227 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      3
-       分钟
-    </span>
-  
-
-  
-  
-</div>
 
             
           </div>
@@ -215,95 +176,83 @@
 
   <main>
     
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          >
+          
+            <div class="about-avatar">
+              <img src="/img/avatar.png" srcset="/img/loading.gif" lazyload
+                   class="img-fluid" alt="avatar">
+            </div>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name">Fluid</div>
+    <div class="about-intro">An elegant theme for Hexo</div>
+    <div class="about-icons">
       
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">关于Error Spawn failed的问题</h1>
-            
-            <div class="markdown-body">
-              <h2 id="时隔一年没碰博客突然发现我博客上传不了了"><a href="#时隔一年没碰博客突然发现我博客上传不了了" class="headerlink" title="时隔一年没碰博客突然发现我博客上传不了了??!"></a>时隔一年没碰博客突然发现我博客上传不了了??!</h2><p>出现了这样的报错</p>
-<pre><code>fatal: unable to access &#39;https://github.com/*******************************.github.io.git/&#39;: Failed to connect to github.com port 443: Timed out
-FATAL &#123;
-  err: Error: Spawn failed
-      at ChildProcess.&lt;anonymous&gt; (C:\Users\*******************************\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)
-      at ChildProcess.emit (events.js:315:20)
-      at ChildProcess.cp.emit (C:\Users\*******************************\node_modules\cross-spawn\lib\enoent.js:34:29)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12) &#123;
-    code: 128
-  &#125;
-&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</code></pre>
-<p><strong>啊这?</strong></p>
-<img src="https://s3.ax1x.com/2021/03/18/6RKcTA.jpg" srcset="/img/loading.gif" lazyload width="50%" height="50%"  />
-
-<p>后来病急乱投医直接搜索<br><strong>err: Error: Spawn failed</strong><br>一看啊,各种操作都有,都试了后<br>全部木大<br>后来自己仔细一想<br>今年好像github上不去了<br><img src="https://s4.ax1x.com/2021/03/19/6fSy8A.jpg" srcset="/img/loading.gif" lazyload><br>我直接代理<br>不出所料直接成功<br>后来发现<br><img src="https://s4.ax1x.com/2021/03/19/6fSObT.jpg" srcset="/img/loading.gif" lazyload alt="见黄色标记"><br>原来真正的原因写得清清楚楚<br><em>fatal: unable to access github</em><br>这个故事告诉我们要学好英语</p>
-
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                
-              </div>
-              
-                <p class="note note-warning">
-                  
-                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
-                  
-                </p>
-              
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2021/03/20/%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">一些小问题</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2021/03/18/%E4%BB%8E%E7%99%BD%E5%AB%96%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7%E7%9A%84%E6%82%B2%E4%BC%A4%E6%95%85%E4%BA%8B/">
-                        <span class="hidden-mobile">从白嫖开始说起的悲伤故事</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+        
+        
+        
+        <a href=https://github.com class="
+           hint--bottom hint--rounded"
+           aria-label=GitHub
+           target="_blank"
+        >
+          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=https://douban.com class="
+           hint--bottom hint--rounded"
+           aria-label=豆瓣
+           target="_blank"
+        >
+          <i class="iconfont icon-douban-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a  class="qr-trigger
+           "
+           
+           target="_self"
+        >
+          <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
+          
+            <img class="qr-img" src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="qrcode" />
+          
+        </a>
+      
     </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-      </div>
-    
   </div>
 </div>
 
-<!-- Custom -->
+<article class="about-content page-content mt-5">
+  <div class="markdown-body">
+    <h1 id="好耶这里啥都没有😎"><a href="#好耶这里啥都没有😎" class="headerlink" title="好耶这里啥都没有😎"></a>好耶这里啥都没有<a target="_blank" rel="noopener" href="https://emojipedia.org/smiling-face-with-sunglasses/">😎</a></h1><p>广告招商<a target="_blank" rel="noopener" href="https://emojipedia.org/money-mouth-face/">🤑</a></p>
+<p>E-mail：<a href="mailto:&#x31;&#52;&#x35;&#x32;&#55;&#x34;&#x30;&#x37;&#56;&#52;&#64;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;">&#x31;&#52;&#x35;&#x32;&#55;&#x34;&#x30;&#x37;&#56;&#52;&#64;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;</a></p>
 
+  </div>
 
+  
+</article>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
     
@@ -407,11 +356,7 @@ FATAL &#123;
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
 
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
 
 
 

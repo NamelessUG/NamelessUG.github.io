@@ -18,7 +18,7 @@
   <meta name="author" content="NamelessUG">
   <meta name="keywords" content="">
   
-  <title>更新 - “航”站楼</title>
+  <title>树莓派上手流程 - “航”站楼</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="更新">
+            <span class="h2" id="subtitle" title="树莓派上手流程">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-31 22:00" pubdate>
-        2021年3月31日 晚上
+      <time datetime="2021-08-14 18:34" pubdate>
+        2021年8月14日 晚上
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      111 字
+      1k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      11
        分钟
     </span>
   
@@ -225,10 +225,93 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">更新</h1>
+            <h1 style="display: none">树莓派上手流程</h1>
             
             <div class="markdown-body">
-              <h2 id="出了点意外"><a href="#出了点意外" class="headerlink" title="出了点意外"></a>出了点意外</h2><p>其实已经搬迁到阿里云了,介于技术水平不足不能沿用Hexo,其实我觉得Hexo又方便又好看而且Markdown又方便写作.<br>🙃🙃🙃<br>So,我修好啦github链接失败的问题,最后发现还是DNS污染的问题,通过查资料,只要修改host文件就解决了.<br>所以还是继续Hexo八.🐔<br>附解决方案:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/66facbd8926a">如何加速国内Github访问</a></p>
+              <h1 id="树莓派上手流程"><a href="#树莓派上手流程" class="headerlink" title="树莓派上手流程"></a>树莓派上手流程</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>As you can see</strong>，我直接破费整了一块树莓派4B。</p>
+<p>它有什么用捏？它确实没什么用<a target="_blank" rel="noopener" href="https://emojipedia.org/upside-down-face/">🙃</a>（指在我手里）</p>
+<p>好吧，反正我目前的想法是将其作为我博客的服务器</p>
+<p>但是为什么要写这篇流程？当然是为了造福群众</p>
+<p>（实际上是自己经常把环境搞得和<a target="_blank" rel="noopener" href="https://emojipedia.org/pile-of-poo/">💩</a>一样写好方便重装&lt;笑&gt;）</p>
+<p>当然网上类似的流程有很多，我主要推荐一个网站就够了</p>
+<p><a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/">树莓派实验室</a>这个网站真的是美滋滋，有兴趣可以去看一下</p>
+<p>Ps：本系列文章主要涉及</p>
+<p>1.树莓派简单上手（安装，简单优化）</p>
+<p>2.LNMP的搭建（确实我也不懂）</p>
+<p>3.Frp的最简单使用（全靠魔法）</p>
+<p>4.Hexo的部署（一般死在第二步）</p>
+<p>（不完善陆续完备）</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-准备系统"><a href="#1-准备系统" class="headerlink" title="1.准备系统"></a>1.准备系统</h3><p>​    我们二话不说直接选择镜像系统，这里我们直接选择<a target="_blank" rel="noopener" href="https://downloads.raspberrypi.org/raspios_lite_armhf_latest">32位Lite（无桌面版）</a>（←我就是下载链接<a target="_blank" rel="noopener" href="https://emojipedia.org/smiling-face-with-halo/">😇</a>）镜像，为什么选择无桌面，因为帅啊<a target="_blank" rel="noopener" href="https://emojipedia.org/rolling-on-the-floor-laughing/">🤣</a></p>
+<p>​    OK我们直接来到下载完毕，接下来是写入SD卡，使用工具<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/win32diskimager/files/Archive/Win32DiskImager-1.0.0-binary.zip/download">Win32DiskImager</a>（←我就是下载链接<a target="_blank" rel="noopener" href="https://emojipedia.org/smiling-face-with-halo/">😇</a>），写入比较简单我就不赘述，参考<a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/2013/09/07/raspberry-pi-under-windows-system-installation-to-sd-card.html">【树莓派实验室】Windowns 下安装树莓派系统到SD卡</a></p>
+<p>​    插卡前我们在boot里新建一个无后缀的文件ssh,此处是为方便我们接下来的远程连接树莓派打基础<a target="_blank" rel="noopener" href="https://emojipedia.org/smiling-face-with-sunglasses/">😎</a></p>
+<p>​    插卡上电<a target="_blank" rel="noopener" href="https://emojipedia.org/thumbs-up/">👍</a></p>
+<p>Ps：我的树莓派是连接到路由器上的</p>
+<p>​    </p>
+<p><img src="https://shumeipai.nxez.com/wp-content/uploads/2013/09/20201018204544994.gif" srcset="/img/loading.gif" lazyload></p>
+<h3 id="2-进入系统"><a href="#2-进入系统" class="headerlink" title="2.进入系统"></a>2.进入系统</h3><p>在正式进入系统之前，我们还需要做一些事</p>
+<p>准备ssh软件（为什么不直接接入屏幕呢？麻烦啊，当然也不是不行）</p>
+<p>这里我们一般选择<a target="_blank" rel="noopener" href="https://make.quwj.com/bookmark/328/go">PUTTY</a>，确实挺好用而且支持中文。</p>
+<p>打开的页面大概长这样</p>
+<p><img src="https://z3.ax1x.com/2021/08/15/fcK47q.jpg" srcset="/img/loading.gif" lazyload></p>
+<div id="PUTTY"></div>
+
+<p>这里我们只需一二三三步</p>
+<p>1.输入树莓派IP地址</p>
+<p>2.保存地址（方便下一次一次搞定）</p>
+<p>3.连接</p>
+<p>这里细心的小伙伴已经发现，我懂个棒棒锤地址，好问题我也不懂所以我很快啊，已经参考好了文章，如下<a target="_blank" rel="noopener" href="https://blog.csdn.net/wongnoubo/article/details/79628313">“查看树莓派ip地址的几种方法”</a></p>
+<p>我一般是使用在<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/dca1fa6f704f70f1a44052cb.html">命令提示符</a>输入：ping raspberrypi.local</p>
+<p><img src="https://z3.ax1x.com/2021/08/15/fcMbIP.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>可以直接看到我们树莓派的地址，虽然我也不知道为什么会这样，但是地址就是这个（直接暴露不懂装懂的属性）</p>
+<p>我们直接用<a href="#PUTTY">PUTTY</a>连接进行下一步”上号”</p>
+<p>然后我们就会进入这个界面</p>
+<p><img src="https://z3.ax1x.com/2021/08/15/fcU1HS.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>输入初始账号密码</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-literal">pi</span><br>raspberry<br></code></pre></td></tr></table></figure>
+
+<p>然后我们看到它说输入“passwd”改密码，改为自己喜欢的密码（密码输入时是不显示的）</p>
+<p>根据提示搞定</p>
+<p>然后我们再把<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/104469251">root账号</a>搞定，输入</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo passwd root</span><br></code></pre></td></tr></table></figure>
+
+<p><em>切换用户：su 用户名</em></p>
+<p>基本开机任务就搞定了</p>
+<h3 id="3-优化系统"><a href="#3-优化系统" class="headerlink" title="3.优化系统"></a>3.优化系统</h3><p>优化分为以下两部分</p>
+<ol>
+<li><p>设置静态IP</p>
+</li>
+<li><p>切换为国内源</p>
+</li>
+</ol>
+<h4 id="静态IP"><a href="#静态IP" class="headerlink" title="静态IP"></a>静态IP</h4><p>我们直接参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/wongnoubo/article/details/88833317">【CSDN】树莓派设置静态ip</a></p>
+<ol>
+<li><p>在cmd bash下面执行ipconfig -all查看自身ip情况</p>
+</li>
+<li><p>修改/etc/dhcpcd.conf（nano /etc/dhcpcd.conf）</p>
+</li>
+<li><p>找到如图这一行，去掉注释（按需修改地址，更改ip_address那里，其实我也不太懂）</p>
+<p><img src="https://z3.ax1x.com/2021/08/15/fcUZhd.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>！！非常重要！！重启（sudo reboot）</p>
+</li>
+</ol>
+<h4 id="切换源"><a href="#切换源" class="headerlink" title="切换源"></a>切换源</h4><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/a496298685/article/details/104287859">“为树莓派一键更换国内apt镜像源”</a></p>
+<p>Such as更换腾讯源</p>
+<p>1.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">sed</span> <span class="hljs-selector-tag">-i</span> &quot;<span class="hljs-selector-tag">s</span>?<span class="hljs-selector-tag">http</span>://<span class="hljs-selector-tag">raspbian</span><span class="hljs-selector-class">.raspberrypi</span><span class="hljs-selector-class">.org</span>/<span class="hljs-selector-tag">raspbian</span>/?<span class="hljs-selector-tag">https</span>://<span class="hljs-selector-tag">mirrors</span><span class="hljs-selector-class">.cloud</span><span class="hljs-selector-class">.tencent</span><span class="hljs-selector-class">.com</span>/<span class="hljs-selector-tag">raspbian</span>/<span class="hljs-selector-tag">raspbian</span>/?<span class="hljs-selector-tag">g</span>&quot; /<span class="hljs-selector-tag">etc</span>/<span class="hljs-selector-tag">apt</span>/<span class="hljs-selector-tag">sources</span><span class="hljs-selector-class">.list</span><br> <span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">sed</span> <span class="hljs-selector-tag">-i</span> &quot;<span class="hljs-selector-tag">s</span>?<span class="hljs-selector-tag">http</span>://<span class="hljs-selector-tag">archive</span><span class="hljs-selector-class">.raspberrypi</span><span class="hljs-selector-class">.org</span>/<span class="hljs-selector-tag">debian</span>/?<span class="hljs-selector-tag">https</span>://<span class="hljs-selector-tag">mirrors</span><span class="hljs-selector-class">.cloud</span><span class="hljs-selector-class">.tencent</span><span class="hljs-selector-class">.com</span>/<span class="hljs-selector-tag">raspberrypi</span>/?<span class="hljs-selector-tag">g</span>&quot; /<span class="hljs-selector-tag">etc</span>/<span class="hljs-selector-tag">apt</span>/<span class="hljs-selector-tag">sources</span><span class="hljs-selector-class">.list</span><span class="hljs-selector-class">.d</span>/<span class="hljs-selector-tag">raspi</span><span class="hljs-selector-class">.list</span><br></code></pre></td></tr></table></figure>
+
+<p>2.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">sudo apt <span class="hljs-keyword">update</span><br>sudo apt <span class="hljs-keyword">upgrade</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>至此我们的机器就算准备完毕了<a target="_blank" rel="noopener" href="https://emojipedia.org/clapping-hands/">👏</a><a target="_blank" rel="noopener" href="https://emojipedia.org/clapping-hands/">👏</a><a target="_blank" rel="noopener" href="https://emojipedia.org/clapping-hands/">👏</a></p>
+<h3 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h3><p>1.<a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/">树莓派实验室</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/download#tools">【树莓派实验室】资源下载</a></p>
+<p>3.<a target="_blank" rel="noopener" href="https://blog.csdn.net/wongnoubo/article/details/79628313">【CSDN】查看树莓派ip地址的几种方法</a></p>
+<p>4.<a target="_blank" rel="noopener" href="https://blog.csdn.net/wongnoubo/article/details/88833317">【CSDN】树莓派设置静态ip</a></p>
+<p>5.<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/104469251">Ubuntu 中的 root 用户：你应该知道的重要事情</a></p>
+<p>6.<a target="_blank" rel="noopener" href="https://blog.csdn.net/a496298685/article/details/104287859">为树莓派一键更换国内apt镜像源</a></p>
 
             </div>
             <hr>
@@ -239,7 +322,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%BB%BA%E7%AB%99/">建站</a>
+                      <a class="hover-with-bg" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">单片机</a>
                     
                   </div>
                 
@@ -256,18 +339,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/02/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A1%E5%88%92/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">最近的一些计划</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/03/25/%E8%A6%81%E6%90%AC%E5%AE%B6%E4%BA%86/">
-                        <span class="hidden-mobile">要搬家了</span>
+                      <a href="/2021/08/10/hi/">
+                        <span class="hidden-mobile">hi</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
