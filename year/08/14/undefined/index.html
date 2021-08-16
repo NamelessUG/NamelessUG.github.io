@@ -1,0 +1,582 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="NamelessUG">
+  <meta name="keywords" content="">
+  
+  <title>树莓派上手流程 - 没人看的站</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"namelessug.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>ヾ(=･ω･=)o</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="树莓派上手流程">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-08-14 18:34" pubdate>
+        2021年8月14日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      11
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">树莓派上手流程</h1>
+            
+            <div class="markdown-body">
+              <h1 id="树莓派上手流程"><a href="#树莓派上手流程" class="headerlink" title="树莓派上手流程"></a>树莓派上手流程</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>As you can see</strong>，我直接破费整了一块树莓派4B。</p>
+<p>它有什么用捏？它确实没什么用<a target="_blank" rel="noopener" href="https://emojipedia.org/upside-down-face/">🙃</a>（指在我手里）</p>
+<p>好吧，反正我目前的想法是将其作为我博客的服务器</p>
+<p>但是为什么要写这篇流程？当然是为了造福群众</p>
+<p>（实际上是自己经常把环境搞得和<a target="_blank" rel="noopener" href="https://emojipedia.org/pile-of-poo/">💩</a>一样写好方便重装&lt;笑&gt;）</p>
+<p>当然网上类似的流程有很多，我主要推荐一个网站就够了</p>
+<p><a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/">树莓派实验室</a>这个网站真的是美滋滋，有兴趣可以去看一下</p>
+<p>Ps：本系列文章主要涉及</p>
+<p>1.树莓派简单上手（安装，简单优化）</p>
+<p>2.LNMP的搭建（确实我也不懂）</p>
+<p>3.Frp的最简单使用（全靠魔法）</p>
+<p>4.Hexo的部署（一般死在第二步）</p>
+<p>（不完善陆续完备）</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-准备系统"><a href="#1-准备系统" class="headerlink" title="1.准备系统"></a>1.准备系统</h3><p>​    我们二话不说直接选择镜像系统，这里我们直接选择<a target="_blank" rel="noopener" href="https://downloads.raspberrypi.org/raspios_lite_armhf_latest">32位Lite（无桌面版）</a>（←我就是下载链接<a target="_blank" rel="noopener" href="https://emojipedia.org/smiling-face-with-halo/">😇</a>）镜像，为什么选择无桌面，因为帅啊<a target="_blank" rel="noopener" href="https://emojipedia.org/rolling-on-the-floor-laughing/">🤣</a></p>
+<p>​    OK我们直接来到下载完毕，接下来是写入SD卡，使用工具<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/win32diskimager/files/Archive/Win32DiskImager-1.0.0-binary.zip/download">Win32DiskImager</a>（←我就是下载链接<a target="_blank" rel="noopener" href="https://emojipedia.org/smiling-face-with-halo/">😇</a>），写入比较简单我就不赘述，参考<a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/2013/09/07/raspberry-pi-under-windows-system-installation-to-sd-card.html">【树莓派实验室】Windowns 下安装树莓派系统到SD卡</a></p>
+<p>​    插卡前我们在boot里新建一个无后缀的文件ssh,此处是为方便我们接下来的远程连接树莓派打基础<a target="_blank" rel="noopener" href="https://emojipedia.org/smiling-face-with-sunglasses/">😎</a></p>
+<p>​    插卡上电<a target="_blank" rel="noopener" href="https://emojipedia.org/thumbs-up/">👍</a></p>
+<p>Ps：我的树莓派是连接到路由器上的</p>
+<p>​    </p>
+<p><img src="https://shumeipai.nxez.com/wp-content/uploads/2013/09/20201018204544994.gif" srcset="/img/loading.gif" lazyload></p>
+<h3 id="2-进入系统"><a href="#2-进入系统" class="headerlink" title="2.进入系统"></a>2.进入系统</h3><p>在正式进入系统之前，我们还需要做一些事</p>
+<p>准备ssh软件（为什么不直接接入屏幕呢？麻烦啊，当然也不是不行）</p>
+<p>这里我们一般选择<a target="_blank" rel="noopener" href="https://make.quwj.com/bookmark/328/go">PUTTY</a>，确实挺好用而且支持中文。</p>
+<p>打开的页面大概长这样</p>
+<p><img src="https://z3.ax1x.com/2021/08/15/fcK47q.jpg" srcset="/img/loading.gif" lazyload></p>
+<div id="PUTTY"></div>
+
+<p>这里我们只需一二三三步</p>
+<p>1.输入树莓派IP地址</p>
+<p>2.保存地址（方便下一次一次搞定）</p>
+<p>3.连接</p>
+<p>这里细心的小伙伴已经发现，我懂个棒棒锤地址，好问题我也不懂所以我很快啊，已经参考好了文章，如下<a target="_blank" rel="noopener" href="https://blog.csdn.net/wongnoubo/article/details/79628313">“查看树莓派ip地址的几种方法”</a></p>
+<p>我一般是使用在<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/dca1fa6f704f70f1a44052cb.html">命令提示符</a>输入：ping raspberrypi.local</p>
+<p><img src="https://z3.ax1x.com/2021/08/15/fcMbIP.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>可以直接看到我们树莓派的地址，虽然我也不知道为什么会这样，但是地址就是这个（直接暴露不懂装懂的属性）</p>
+<p>我们直接用<a href="#PUTTY">PUTTY</a>连接进行下一步”上号”</p>
+<p>然后我们就会进入这个界面</p>
+<p><img src="https://z3.ax1x.com/2021/08/15/fcU1HS.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>输入初始账号密码</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-literal">pi</span><br>raspberry<br></code></pre></td></tr></table></figure>
+
+<p>然后我们看到它说输入“passwd”改密码，改为自己喜欢的密码（密码输入时是不显示的）</p>
+<p>根据提示搞定</p>
+<p>然后我们再把<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/104469251">root账号</a>搞定，输入</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo passwd root</span><br></code></pre></td></tr></table></figure>
+
+<p><em>切换用户：su 用户名</em></p>
+<p>基本开机任务就搞定了</p>
+<h3 id="3-优化系统"><a href="#3-优化系统" class="headerlink" title="3.优化系统"></a>3.优化系统</h3><p>优化分为以下两部分</p>
+<ol>
+<li><p>设置静态IP</p>
+</li>
+<li><p>切换为国内源</p>
+</li>
+</ol>
+<h4 id="静态IP"><a href="#静态IP" class="headerlink" title="静态IP"></a>静态IP</h4><p>我们直接参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/wongnoubo/article/details/88833317">【CSDN】树莓派设置静态ip</a></p>
+<ol>
+<li><p>在cmd bash下面执行ipconfig -all查看自身ip情况</p>
+</li>
+<li><p>修改/etc/dhcpcd.conf（nano /etc/dhcpcd.conf）</p>
+</li>
+<li><p>找到如图这一行，去掉注释（按需修改地址，更改ip_address那里，其实我也不太懂）</p>
+<p><img src="https://z3.ax1x.com/2021/08/15/fcUZhd.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>！！非常重要！！重启（sudo reboot）</p>
+</li>
+</ol>
+<h4 id="切换源"><a href="#切换源" class="headerlink" title="切换源"></a>切换源</h4><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/a496298685/article/details/104287859">“为树莓派一键更换国内apt镜像源”</a></p>
+<p>Such as更换腾讯源</p>
+<p>1.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">sed</span> <span class="hljs-selector-tag">-i</span> &quot;<span class="hljs-selector-tag">s</span>?<span class="hljs-selector-tag">http</span>://<span class="hljs-selector-tag">raspbian</span><span class="hljs-selector-class">.raspberrypi</span><span class="hljs-selector-class">.org</span>/<span class="hljs-selector-tag">raspbian</span>/?<span class="hljs-selector-tag">https</span>://<span class="hljs-selector-tag">mirrors</span><span class="hljs-selector-class">.cloud</span><span class="hljs-selector-class">.tencent</span><span class="hljs-selector-class">.com</span>/<span class="hljs-selector-tag">raspbian</span>/<span class="hljs-selector-tag">raspbian</span>/?<span class="hljs-selector-tag">g</span>&quot; /<span class="hljs-selector-tag">etc</span>/<span class="hljs-selector-tag">apt</span>/<span class="hljs-selector-tag">sources</span><span class="hljs-selector-class">.list</span><br> <span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">sed</span> <span class="hljs-selector-tag">-i</span> &quot;<span class="hljs-selector-tag">s</span>?<span class="hljs-selector-tag">http</span>://<span class="hljs-selector-tag">archive</span><span class="hljs-selector-class">.raspberrypi</span><span class="hljs-selector-class">.org</span>/<span class="hljs-selector-tag">debian</span>/?<span class="hljs-selector-tag">https</span>://<span class="hljs-selector-tag">mirrors</span><span class="hljs-selector-class">.cloud</span><span class="hljs-selector-class">.tencent</span><span class="hljs-selector-class">.com</span>/<span class="hljs-selector-tag">raspberrypi</span>/?<span class="hljs-selector-tag">g</span>&quot; /<span class="hljs-selector-tag">etc</span>/<span class="hljs-selector-tag">apt</span>/<span class="hljs-selector-tag">sources</span><span class="hljs-selector-class">.list</span><span class="hljs-selector-class">.d</span>/<span class="hljs-selector-tag">raspi</span><span class="hljs-selector-class">.list</span><br></code></pre></td></tr></table></figure>
+
+<p>2.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">sudo apt <span class="hljs-keyword">update</span><br>sudo apt <span class="hljs-keyword">upgrade</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>至此我们的机器就算准备完毕了<a target="_blank" rel="noopener" href="https://emojipedia.org/clapping-hands/">👏</a><a target="_blank" rel="noopener" href="https://emojipedia.org/clapping-hands/">👏</a><a target="_blank" rel="noopener" href="https://emojipedia.org/clapping-hands/">👏</a></p>
+<h3 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h3><p>1.<a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/">树莓派实验室</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/download#tools">【树莓派实验室】资源下载</a></p>
+<p>3.<a target="_blank" rel="noopener" href="https://blog.csdn.net/wongnoubo/article/details/79628313">【CSDN】查看树莓派ip地址的几种方法</a></p>
+<p>4.<a target="_blank" rel="noopener" href="https://blog.csdn.net/wongnoubo/article/details/88833317">【CSDN】树莓派设置静态ip</a></p>
+<p>5.<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/104469251">Ubuntu 中的 root 用户：你应该知道的重要事情</a></p>
+<p>6.<a target="_blank" rel="noopener" href="https://blog.csdn.net/a496298685/article/details/104287859">为树莓派一键更换国内apt镜像源</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">单片机</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/year/08/10/undefined/">
+                        <span class="hidden-mobile">hi</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'NamelessUG/NamelessUG.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
