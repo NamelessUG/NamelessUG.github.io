@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      236 字
+      284 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      3
        分钟
     </span>
   
@@ -228,24 +228,30 @@
             <h1 style="display: none">树莓派上手流程（2）</h1>
             
             <div class="markdown-body">
-              <h1 id="树莓派上手流程（2）"><a href="#树莓派上手流程（2）" class="headerlink" title="树莓派上手流程（2）"></a>树莓派上手流程（2）</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>As you can see</strong>，我直接破费整了一块树莓派4B。</p>
-<p>它有什么用捏？它确实没什么用<a target="_blank" rel="noopener" href="https://emojipedia.org/upside-down-face/">🙃</a>（指在我手里）</p>
-<p>好吧，反正我目前的想法是将其作为我博客的服务器</p>
-<p>但是为什么要写这篇流程？当然是为了造福群众</p>
-<p>（实际上是自己经常把环境搞得和<a target="_blank" rel="noopener" href="https://emojipedia.org/pile-of-poo/">💩</a>一样写好方便重装&lt;笑&gt;）</p>
-<p>当然网上类似的流程有很多，我主要推荐一个网站就够了</p>
-<p><a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/">树莓派实验室</a>这个网站真的是美滋滋，有兴趣可以去看一下</p>
+              <h1 id="树莓派不太聪明的流程2💩"><a href="#树莓派不太聪明的流程2💩" class="headerlink" title="树莓派不太聪明的流程2💩"></a>树莓派不太聪明的流程<strong>2</strong>💩</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>好耶，到这我们基本上已经完成了树莓派的启动</p>
 <p>Ps：本系列文章主要涉及</p>
 <p>1.树莓派简单上手（安装，简单优化）</p>
 <div class="note note-success">
-            <p>欧耶，我直接变出1.5</p>
+            <p>欧耶，我直接变出1.5：树莓派wifi配置（我又不懂）</p>
           </div>
 
 <p>2.LNMP的搭建（确实我也不懂）</p>
 <p>3.Frp的最简单使用（全靠魔法）</p>
 <p>4.Hexo的部署（一般死在第二步）</p>
 <p>（不完善陆续完备）</p>
+<h2 id="1-5树莓派wifi配置"><a href="#1-5树莓派wifi配置" class="headerlink" title="1.5树莓派wifi配置"></a>1.5树莓派wifi配置</h2><p>wifi配置我承认我真的不太懂🤓，基本是参照网上教程这里只是稍作整理</p>
+<p>1.rfkill</p>
+<p>回忆上一次的登录界面</p>
+<img src="https://z3.ax1x.com/2021/08/15/fcU1HS.jpg" srcset="/img/loading.gif" lazyload  />
 
+<p>它直接告诉我们Wi-Fi is currently blocked by rfkill说人话就是wifi没开</p>
+<p>所以我们直接参考👉<a target="_blank" rel="noopener" href="https://www.linuxcool.com/rfkill">rfkill命令 – 管理蓝牙和wifi</a></p>
+<p>稍微整理一下</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tap">rfkill list <span class="hljs-comment">#设备列表</span><br>rfkill block<span class="hljs-number"> 0 </span><span class="hljs-comment">#关闭0号设备</span><br>rfkill unblock<span class="hljs-number"> 0 </span><span class="hljs-comment">#打开0号设备</span><br><span class="hljs-comment">#这里的编号是取决于列表里的编号</span><br></code></pre></td></tr></table></figure>
+
+<p>然后我们开始配置wifi</p>
+<p>惯例直接参考👉<a target="_blank" rel="noopener" href="https://tech.biko.pub/post#/rpi-setup-wifi-ssh?id=%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE-wifi-%E5%92%8C-ssh">从零开始：无屏幕和键盘配置树莓派 WiFi 和 SSH</a></p>
+<h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2>
             </div>
             <hr>
             <div>
