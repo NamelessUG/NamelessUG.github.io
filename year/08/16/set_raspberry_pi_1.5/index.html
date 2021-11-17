@@ -18,9 +18,25 @@
   <meta name="author" content="NamelessUG">
   <meta name="keywords" content="">
   
-  <title>标签 - 没人看的站</title>
+  <title>树莓派上手流程（2） - 没人看的站</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -48,7 +64,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -142,22 +158,55 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.jpg') no-repeat center center;
+         style="background: url('https://gitee.com/Nameless25/picgo/raw/master/img/a5022e28f7aeb10f77223ac27ed5cca7.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="标签">
+            <span class="h2" id="subtitle" title="树莓派上手流程（2）">
               
             </span>
 
             
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-08-16 23:25" pubdate>
+        2021年8月16日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      314 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
           </div>
 
-          
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
           
         </div>
       </div>
@@ -166,24 +215,147 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center tagcloud">
-  <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 30px; color: #337ab7">单片机</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 22.5px; color: #779bd3">建站</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 15px; color: #bbe">日常</a>
-</div>
-
-              </div>
-            </div>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">树莓派上手流程（2）</h1>
+            
+            <div class="markdown-body">
+              <h1 id="树莓派不太聪明的流程1-5💩"><a href="#树莓派不太聪明的流程1-5💩" class="headerlink" title="树莓派不太聪明的流程1.5💩"></a>树莓派不太聪明的流程<strong>1.5</strong>💩</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>好耶，到这我们基本上已经完成了树莓派的启动</p>
+<p>Ps：本系列文章主要涉及</p>
+<p>1.树莓派简单上手（安装，简单优化）</p>
+<div class="note note-success">
+            <p>欧耶，我直接变出1.5：树莓派wifi配置（我又不懂）</p>
           </div>
+
+<p>2.LNMP的搭建（确实我也不懂）</p>
+<p>3.Frp的最简单使用（全靠魔法）</p>
+<p>4.Hexo的部署（一般死在第二步）</p>
+<p>（不完善陆续完备）</p>
+<h2 id="1-5树莓派wifi配置"><a href="#1-5树莓派wifi配置" class="headerlink" title="1.5树莓派wifi配置"></a>1.5树莓派wifi配置</h2><p>wifi配置我承认我真的不太懂🤓，基本是参照网上教程这里只是稍作整理</p>
+<p>1.rfkill</p>
+<p>回忆上一次的登录界面</p>
+<img src="https://z3.ax1x.com/2021/08/15/fcU1HS.jpg"  />
+
+<p>它直接告诉我们Wi-Fi is currently blocked by rfkill说人话就是wifi没开</p>
+<p>所以我们直接参考👉<a target="_blank" rel="noopener" href="https://www.linuxcool.com/rfkill">rfkill命令 – 管理蓝牙和wifi</a></p>
+<p>稍微整理一下</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tap">rfkill list <span class="hljs-comment">#设备列表</span><br>rfkill block<span class="hljs-number"> 0 </span><span class="hljs-comment">#关闭0号设备</span><br>rfkill unblock<span class="hljs-number"> 0 </span><span class="hljs-comment">#打开0号设备</span><br><span class="hljs-comment">#这里的编号是取决于列表里的编号</span><br></code></pre></td></tr></table></figure>
+
+<p>然后我们开始配置wifi</p>
+<p>惯例直接参考👉<a target="_blank" rel="noopener" href="https://tech.biko.pub/post#/rpi-setup-wifi-ssh?id=%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE-wifi-%E5%92%8C-ssh">从零开始：无屏幕和键盘配置树莓派 WiFi 和 SSH</a></p>
+<h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2><p>1.<a target="_blank" rel="noopener" href="https://www.linuxcool.com/rfkill">rfkill命令 – 管理蓝牙和wifi</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://tech.biko.pub/post#/rpi-setup-wifi-ssh?id=%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE-wifi-%E5%92%8C-ssh">从零开始：无屏幕和键盘配置树莓派 WiFi 和 SSH</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">单片机</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/year/09/06/set_raspberry_pi_2/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">树莓派真的不太聪明流程2</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/year/08/14/set_raspberry_pi/">
+                        <span class="hidden-mobile">树莓派上手流程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'NamelessUG/NamelessUG.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -283,9 +455,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
 
 
 

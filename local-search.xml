@@ -4,11 +4,30 @@
   
   
   <entry>
-    <title>树莓派上手流程（2）</title>
-    <link href="/year/08/16/set_raspberry_pi_2/"/>
-    <url>/year/08/16/set_raspberry_pi_2/</url>
+    <title>树莓派真的不太聪明流程2</title>
+    <link href="/year/09/06/set_raspberry_pi_2/"/>
+    <url>/year/09/06/set_raspberry_pi_2/</url>
     
-    <content type="html"><![CDATA[<h1 id="树莓派不太聪明的流程2💩"><a href="#树莓派不太聪明的流程2💩" class="headerlink" title="树莓派不太聪明的流程2💩"></a>树莓派不太聪明的流程<strong>2</strong>💩</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>好耶，到这我们基本上已经完成了树莓派的启动</p><p>Ps：本系列文章主要涉及</p><p>1.树莓派简单上手（安装，简单优化）</p><div class="note note-success">            <p>欧耶，我直接变出1.5：树莓派wifi配置（我又不懂）</p>          </div><p>2.LNMP的搭建（确实我也不懂）</p><p>3.Frp的最简单使用（全靠魔法）</p><p>4.Hexo的部署（一般死在第二步）</p><p>（不完善陆续完备）</p><h2 id="1-5树莓派wifi配置"><a href="#1-5树莓派wifi配置" class="headerlink" title="1.5树莓派wifi配置"></a>1.5树莓派wifi配置</h2><p>wifi配置我承认我真的不太懂🤓，基本是参照网上教程这里只是稍作整理</p><p>1.rfkill</p><p>回忆上一次的登录界面</p><img src="https://z3.ax1x.com/2021/08/15/fcU1HS.jpg"  /><p>它直接告诉我们Wi-Fi is currently blocked by rfkill说人话就是wifi没开</p><p>所以我们直接参考👉<a href="https://www.linuxcool.com/rfkill">rfkill命令 – 管理蓝牙和wifi</a></p><p>稍微整理一下</p><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tap">rfkill list <span class="hljs-comment">#设备列表</span><br>rfkill block<span class="hljs-number"> 0 </span><span class="hljs-comment">#关闭0号设备</span><br>rfkill unblock<span class="hljs-number"> 0 </span><span class="hljs-comment">#打开0号设备</span><br><span class="hljs-comment">#这里的编号是取决于列表里的编号</span><br></code></pre></td></tr></table></figure><p>然后我们开始配置wifi</p><p>惯例直接参考👉<a href="https://tech.biko.pub/post#/rpi-setup-wifi-ssh?id=%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE-wifi-%E5%92%8C-ssh">从零开始：无屏幕和键盘配置树莓派 WiFi 和 SSH</a></p><h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="树莓派真的不太聪明流程2💩"><a href="#树莓派真的不太聪明流程2💩" class="headerlink" title="树莓派真的不太聪明流程2💩"></a>树莓派真的不太聪明流程<strong>2</strong>💩</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本章人已经麻了，我们直接快速搞定LNMP和Frp</p><p>Ps：本系列文章主要涉及</p><p>1.树莓派简单上手（安装，简单优化）</p><div class="note note-success">            <p>欧耶，我直接变出1.5：树莓派wifi配置（我又不懂）</p>          </div><p>2.LNMP的搭建（确实我也不懂）</p><p>3.Frp的最简单使用（全靠魔法）</p><p>4.Hexo的部署（一般死在第二步）</p><p>（不完善陆续完备）</p><h2 id="2-LNMP的搭建"><a href="#2-LNMP的搭建" class="headerlink" title="2.LNMP的搭建"></a>2.LNMP的搭建</h2><p>注：这里写得比较随便，回头润色</p><p>LNMP其实就是搭建网站的基础环境，具体可以百度一下下</p><p>至于LNMP我有试过自己一步一步搭建然而一般在搭建PHP的时候莫名其妙报错😇</p><p>后来我还试了一下<a href="https://lnmp.org/install.html">LNMP一键脚本</a>（PS：这个网站不是很稳定，如果想尝试可以试试<a href="https://bbs.vpser.net/forum-25-1.html">介个网站</a>）</p><p>结果也是卡在PHP安装，后来的优化解决方案是使用宝塔面板的一键搭建</p><div class="note note-success">            <p>注意</p>          </div><p>宝塔面板在桌面版本的树莓派系统可能会出现意想不到的大问题（别问问就是试过），本文是基于树莓派命令行系统安装</p><p>具体步骤如下：</p><p>1.安装宝塔面板</p><p>上网<a href="https://www.bt.cn/">“宝塔面板”</a></p><p>获取安装命令</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">wget</span> <span class="hljs-selector-tag">-O</span> <span class="hljs-selector-tag">install</span><span class="hljs-selector-class">.sh</span> <span class="hljs-selector-tag">http</span>://<span class="hljs-selector-tag">download</span><span class="hljs-selector-class">.bt</span><span class="hljs-selector-class">.cn</span>/<span class="hljs-selector-tag">install</span>/<span class="hljs-selector-tag">install-ubuntu_6</span>.0<span class="hljs-selector-class">.sh</span> &amp;&amp; <span class="hljs-selector-tag">bash</span> <span class="hljs-selector-tag">install</span><span class="hljs-selector-class">.sh</span><br></code></pre></td></tr></table></figure><p>（建议以官方为准）</p><p>2.按照引导安装宝塔面板</p><p>这里我不啰嗦提点关键就是</p><p>进入面板安装完lnmp之后先改安全入口，方便以后连入，否则之后8888端口是连不进去的，只能去找它随机的安全入口。</p><p>（应该还有回头想起来再补充）</p><p>3.简简单单收工</p><h2 id="3-Frp的最简单使用"><a href="#3-Frp的最简单使用" class="headerlink" title="3.Frp的最简单使用"></a>3.Frp的最简单使用</h2><p>Frp是什么？白话=打洞上网，就是我没有公网IP我直接打洞到有的地方借用别人的</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>单片机</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>树莓派上手流程（2）</title>
+    <link href="/year/08/16/set_raspberry_pi_1.5/"/>
+    <url>/year/08/16/set_raspberry_pi_1.5/</url>
+    
+    <content type="html"><![CDATA[<h1 id="树莓派不太聪明的流程1-5💩"><a href="#树莓派不太聪明的流程1-5💩" class="headerlink" title="树莓派不太聪明的流程1.5💩"></a>树莓派不太聪明的流程<strong>1.5</strong>💩</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>好耶，到这我们基本上已经完成了树莓派的启动</p><p>Ps：本系列文章主要涉及</p><p>1.树莓派简单上手（安装，简单优化）</p><div class="note note-success">            <p>欧耶，我直接变出1.5：树莓派wifi配置（我又不懂）</p>          </div><p>2.LNMP的搭建（确实我也不懂）</p><p>3.Frp的最简单使用（全靠魔法）</p><p>4.Hexo的部署（一般死在第二步）</p><p>（不完善陆续完备）</p><h2 id="1-5树莓派wifi配置"><a href="#1-5树莓派wifi配置" class="headerlink" title="1.5树莓派wifi配置"></a>1.5树莓派wifi配置</h2><p>wifi配置我承认我真的不太懂🤓，基本是参照网上教程这里只是稍作整理</p><p>1.rfkill</p><p>回忆上一次的登录界面</p><img src="https://z3.ax1x.com/2021/08/15/fcU1HS.jpg"  /><p>它直接告诉我们Wi-Fi is currently blocked by rfkill说人话就是wifi没开</p><p>所以我们直接参考👉<a href="https://www.linuxcool.com/rfkill">rfkill命令 – 管理蓝牙和wifi</a></p><p>稍微整理一下</p><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tap">rfkill list <span class="hljs-comment">#设备列表</span><br>rfkill block<span class="hljs-number"> 0 </span><span class="hljs-comment">#关闭0号设备</span><br>rfkill unblock<span class="hljs-number"> 0 </span><span class="hljs-comment">#打开0号设备</span><br><span class="hljs-comment">#这里的编号是取决于列表里的编号</span><br></code></pre></td></tr></table></figure><p>然后我们开始配置wifi</p><p>惯例直接参考👉<a href="https://tech.biko.pub/post#/rpi-setup-wifi-ssh?id=%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE-wifi-%E5%92%8C-ssh">从零开始：无屏幕和键盘配置树莓派 WiFi 和 SSH</a></p><h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2><p>1.<a href="https://www.linuxcool.com/rfkill">rfkill命令 – 管理蓝牙和wifi</a></p><p>2.<a href="https://tech.biko.pub/post#/rpi-setup-wifi-ssh?id=%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%97%A0%E5%B1%8F%E5%B9%95%E5%92%8C%E9%94%AE%E7%9B%98%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE-wifi-%E5%92%8C-ssh">从零开始：无屏幕和键盘配置树莓派 WiFi 和 SSH</a></p>]]></content>
     
     
     
